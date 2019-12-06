@@ -10,7 +10,7 @@ curl -d "maxSize=500000" "http://127.0.0.1:8080/ha/begin"
 
 
 hazelcast-server config:
-
+```
 hazelcast: 
   instance-name: hazelcast-node1
   group: 
@@ -56,3 +56,4 @@ hazelcast:
         batch-size: 100
         class-name: PutIfAbsentMergePolicy
       read-backup-data: false
+```
