@@ -1,0 +1,30 @@
+hazelcast-client:
+  group:
+    name: hazelcast-server
+  network:
+    cluster-members:
+#      - 127.0.0.1 
+      - 10.11.117.38 
+      - 10.11.117.39 
+      - 10.11.117.32
+    smart-routing: true
+    redo-operation: true
+    connection-timeout: 5000
+    connection-attempt-period: 1000
+    connection-attempt-limit: 0
+  near-cache: 
+    mapGet: 
+      max-size: 0
+      time-to-live-seconds: 0
+      max-idle-seconds: 60
+      eviction-policy: LRU
+      invalidate-on-change: true
+      in-memory-format: BINARY
+      eviction: 
+        size: 5000
+        max-size-policy: ENTRY_COUNT
+        eviction-policy: LFU
+  properties: 
+    hazelcast.client.invocation.timeout.seconds: 5
+    hazelcast.client.heartbeat.interval: 5000
+    hazelcast.client.heartbeat.timeout: 10000

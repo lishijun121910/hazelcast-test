@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: hazelcast-case
+server: 
+  port: 8080
+  tomcat:
+    max-threads: 600
+    max-connections: 20000  
+thread: 
+  task: 
+    core_pool_size: 10 
+    max_pool_size: 600 
+    keep_alive_time_seconds: 60 
